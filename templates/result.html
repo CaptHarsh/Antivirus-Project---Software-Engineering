@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="/static/main.css">
+  <title>Safe Hackur - Antivirus Result</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background: linear-gradient(120deg, #880000, #330000);
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      margin: 0;
+    }
+
+    .container {
+      background: #111;
+      border-radius: 8px;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+      padding: 20px;
+      width: 80%;
+      max-width: 600px;
+      text-align: center;
+    }
+
+    .header {
+      background: #880000;
+      color: #fff;
+      font-size: 24px;
+      font-weight: bold;
+      padding: 10px;
+      border-radius: 8px 8px 0 0;
+    }
+
+    .result {
+      font-size: 18px;
+      color: #fff;
+      margin: 20px 0;
+      text-align: left;
+    }
+
+    .highlight {
+      color: #ff0000;
+      font-weight: bold;
+    }
+
+    .signature {
+      font-size: 24px;
+      font-family: 'Clip', sans-serif;
+      text-transform: uppercase;
+      color: #ff0000;
+      margin: 20px 0;
+      text-shadow: 0 0 10px rgba(85, 0, 0, 0.7);
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <div class="header">Safe Hackur - Antivirus Result</div>
+    <div class="result">
+      <p>Model Accuracy:</p>
+      <ul>
+        <li>DecisionTree: <span class="highlight">99.083665%</span></li>
+        <li>RandomForest: <span class="highlight">99.449475%</span></li>
+        <li>GradientBoosting: <span class="highlight">98.804781%</span></li>
+        <li>AdaBoost: <span class="highlight">98.688881%</span></li>
+        <li>GNB: <span class="highlight">70.195581%</span></li>
+      </ul>
+    </div>
+    <div class="result">
+      <p>Best Model:</p>
+      <p><span class="highlight">{{disp2}}</span></p>
+    </div>
+    <div class="result">
+      <p>File: <span class="highlight">{{disp}}</span></p>
+    </div>
+    <div class="signature">
+      <div class="flicker">{{disp1}}</div>
+    </div>
+  </div>
+</body>
+</html>
